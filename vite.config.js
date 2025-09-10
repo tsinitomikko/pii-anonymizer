@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/pii-anonymizer/', // <-- Add this line
+  base: '/pii-anonymizer/',
   plugins: [react()],
 })
