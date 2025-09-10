@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0069d9;
+  --meta-blue: #0084ff;
+  --meta-gray: #f0f2f5;
+  --meta-light-gray: #e4e6eb;
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--meta-gray);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  padding: 24px;
+}
+
+.header {
+  border-bottom: 1px solid var(--meta-light-gray);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.note-container {
+  background-color: #e6f2ff;
+  border: 1px solid #c2e0ff;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.note-container p {
+  color: #0056b3;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.input-section,
+.output-section {
+  margin-bottom: 24px;
+}
+
+.text-input,
+.text-output {
+  width: 100%;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--meta-light-gray);
+  resize: vertical;
+  background-color: #fafbfb;
+  box-sizing: border-box;
+}
+
+.text-input:focus,
+.text-output:focus {
+  outline: none;
+  border-color: var(--meta-blue);
+  box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.2);
+}
+
+.anonymize-button {
+  width: 100%;
+  background-color: var(--meta-blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.anonymize-button:hover {
+  background-color: #0066cc;
+}
+
+.anonymize-button:disabled {
+  background-color: #aeb1b5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.status-note {
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.loading-text {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.error-note {
+  color: #c92237;
+  background-color: #fcebeb;
+  border: 1px solid #f2969b;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.output-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.output-header p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
